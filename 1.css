@@ -1,95 +1,84 @@
-.page-container {
-    position: relative;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
     min-height: 100vh;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Common styles for all header containers */
-.header-top-left, .header-top-right, .header-bottom-left, .header-bottom-right, .header-center {
-    position: absolute;
-    height: 100px;
+/* Header */
+header {
+    background: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main area */
+.main {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
     width: 200px;
-    border: 1px solid #ccc;
-    display: flex;
+    background: #f0f0f0;
+    padding: 20px;
 }
 
-/* Top Left */
-.header-top-left {
-    top: 0;
-    left: 0;
-    justify-content: flex-start;
-    align-items: flex-start;
+.sidebar ul {
+    list-style: none;
 }
 
-/* Top Right */
-.header-top-right {
-    top: 0;
-    right: 0;
-    justify-content: flex-end;
-    align-items: flex-start;
+.sidebar li {
+    margin: 10px 0;
+    cursor: pointer;
 }
 
-/* Center */
-.header-center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: center;    /* Horizontal center */
-    align-items: center;        /* Vertical center */
-}
-
-/* Bottom Left */
-.header-bottom-left {
-    bottom: 0;
-    left: 0;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-
-/* Bottom Right */
-.header-bottom-right {
-    bottom: 0;
-    right: 0;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-/* Content area */
+/* Content */
 .content {
-    padding: 120px 20px;
+    flex: 1;
+    padding: 20px;
 }
 
-.email-form {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
+/* Footer */
+footer {
+    background: #f5f5f5;
+    padding: 20px;
+    text-align: center;
 }
 
-.email-form button {
-    margin-left: auto;  
-}
-
+/* Typography */
 h1 {
     color: #d74c10;
 }
 
 h2 {
     color: #bf290f;
+    margin-bottom: 15px;
 }
 
 h3 {
     color: #ebdd15;
+    margin: 15px 0;
 }
 
 p { 
     color: #e8541e;
+    margin-bottom: 15px;
 }
 
-ol {
-    color: #e40947;
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
 }
 
-ul {
-    color: #5209e4;
+li {
+    margin: 5px 0;
 }
